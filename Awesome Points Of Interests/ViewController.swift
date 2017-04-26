@@ -39,6 +39,16 @@ class ViewController: UIViewController {
             self.addressStackView.isHidden = !self.addressStackView.isHidden
         }
         
+        let blueView = UIView()
+        blueView.backgroundColor = .blue
+        blueView.translatesAutoresizingMaskIntoConstraints = false
+
+        view.addSubview(blueView)
+        blueView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        blueView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        blueView.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        blueView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
         guard let name = nameTextField.text, name.characters.count > 3 else { return }
         guard let address = addressTextField.text, name.characters.count > 3 else { return }
         let index = typeSegmentedControl.selectedSegmentIndex
