@@ -59,7 +59,11 @@ class ViewController: UIViewController {
         blueView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(blueView)
+        
+//        let bottomConstraint = NSLayoutConstraint(item: blueView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
+//        blueView.addConstraint(bottomConstraint)
         blueView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
         blueView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         blueView.widthAnchor.constraint(equalToConstant: 40).isActive = true
         blueView.heightAnchor.constraint(equalToConstant: 40).isActive = true
