@@ -10,6 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var latitudeTextField: UITextField!
+    @IBOutlet weak var longitudeTextField: UITextField!
+
+
+    @IBOutlet weak var addressStackView: UIStackView!
+
+    @IBOutlet weak var typeSegmentedControl: UISegmentedControl!
+    
+    let directory = Directory()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +33,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func savePOI(_ sender: UIButton) {
+        
+        UIView.animate(withDuration: 0.2) { 
+            self.addressStackView.isHidden = !self.addressStackView.isHidden
+        }
+        
+        guard let name = nameTextField.text, name.characters.count > 3 else { return }
+        guard let address = addressTextField.text, name.characters.count > 3 else { return }
+        let index = typeSegmentedControl.selectedSegmentIndex
+        guard let type = PointOfInterest.PoiType(rawValue: index) else { return }
+        
+        let poi = PointOfInterest(name: name, address: address, type: type, latitude: 0, longitude: 0, phoneNumber: "", websiteURL: nil, wikipediaPageURL: nil, numberOfReviews: 0, stars: 0, myReview: 0)
+        
+        directory.add(poi)
+        print(directory.allPois)
+    }
 }
 

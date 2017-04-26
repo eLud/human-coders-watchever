@@ -14,7 +14,7 @@ import CoreLocation
 
 struct PointOfInterest: Hashable {
     
-    enum PoiType {
+    enum PoiType: Int {
         case restaurant
         case museum
         case hotel
