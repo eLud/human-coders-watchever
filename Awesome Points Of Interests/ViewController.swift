@@ -8,6 +8,15 @@
 
 import UIKit
 
+extension UIView {
+    
+    func goRed() {
+        UIView.animate(withDuration: 1.0) {
+            self.backgroundColor = .red
+        }
+    }
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
@@ -41,7 +50,10 @@ class ViewController: UIViewController {
         
         addBlueBox()
         
-        guard let name = nameTextField.text, name.characters.count > 3 else { return }
+        guard let name = nameTextField.text, name.characters.count > 3 else {
+            nameTextField.goRed()
+            return
+        }
         guard let address = addressTextField.text, name.characters.count > 3 else { return }
         let index = typeSegmentedControl.selectedSegmentIndex
         guard let type = PointOfInterest.PoiType(rawValue: index) else { return }
@@ -59,7 +71,6 @@ class ViewController: UIViewController {
         blueView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(blueView)
-        
 //        let bottomConstraint = NSLayoutConstraint(item: blueView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
 //        blueView.addConstraint(bottomConstraint)
         blueView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
@@ -67,6 +78,7 @@ class ViewController: UIViewController {
         blueView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         blueView.widthAnchor.constraint(equalToConstant: 40).isActive = true
         blueView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        blueView.goRed()
     }
 }
-

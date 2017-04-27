@@ -12,7 +12,7 @@ import Foundation
 import CoreLocation
 #endif
 
-struct PointOfInterest: Hashable {
+struct PointOfInterest {
     
     enum PoiType: Int {
         case restaurant
@@ -51,6 +51,9 @@ struct PointOfInterest: Hashable {
     var numberOfReviews: Int
     var stars: Float
     var myReview: Float
+}
+
+extension PointOfInterest: Hashable {
     
     var hashValue: Int {
         return name.hashValue ^ address.hashValue
@@ -63,5 +66,12 @@ struct PointOfInterest: Hashable {
         
         return false
     }
-    
+}
+
+extension Array where Element == String{
+    func sortedAlphabetically() -> [String] {
+        return self.sorted { (s1, s2) -> Bool in
+            return s1 < s2
+        }
+    }
 }
