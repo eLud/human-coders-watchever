@@ -17,6 +17,9 @@ class POIListViewController: UIViewController {
 
         let nib = UINib(nibName: "POITableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "poiCell")
+        
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(refreshList), name: Notification.Name("DirectoryUpdated"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +27,9 @@ class POIListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func refreshList() {
+        tableView.reloadData()
+    }
 
     
     // MARK: - Navigation
