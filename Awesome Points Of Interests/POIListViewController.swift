@@ -10,10 +10,13 @@ import UIKit
 
 class POIListViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let nib = UINib(nibName: "POITableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "poiCell")
     }
 
     override func didReceiveMemoryWarning() {

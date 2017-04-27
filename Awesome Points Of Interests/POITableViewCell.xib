@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="poiCell" id="88p-i4-fCW" customClass="POITableViewCell" customModule="Awesome_Points_Of_Interests" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="88p-i4-fCW" id="8jw-yY-Ora">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type de POI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja6-lM-cLV">
+                        <rect key="frame" x="313" y="11.5" width="93" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.71373334389999998" green="0.71373334389999998" blue="0.71373334389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6tH-1U-K1n">
+                        <rect key="frame" x="8" y="0.0" width="130.5" height="43.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FMg-iB-FVp">
+                                <rect key="frame" x="0.0" y="4.5" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FMg-iB-FVp" secondAttribute="height" multiplier="1:1" id="Jkx-Tu-ul5"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="HqS-hg-egQ">
+                                <rect key="frame" x="43" y="5" width="87.5" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom du POI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rt7-Ih-MaJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6db-UL-age">
+                                        <rect key="frame" x="0.0" y="19.5" width="46" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6tH-1U-K1n" firstAttribute="leading" secondItem="8jw-yY-Ora" secondAttribute="leading" constant="8" id="3cN-eI-QmS"/>
+                    <constraint firstAttribute="bottom" secondItem="6tH-1U-K1n" secondAttribute="bottom" id="DpA-ON-d5D"/>
+                    <constraint firstItem="Ja6-lM-cLV" firstAttribute="trailing" secondItem="8jw-yY-Ora" secondAttribute="trailingMargin" id="E2r-2H-xQD"/>
+                    <constraint firstItem="FMg-iB-FVp" firstAttribute="height" secondItem="8jw-yY-Ora" secondAttribute="height" multiplier="0.8" id="Ead-r4-sdX"/>
+                    <constraint firstItem="Ja6-lM-cLV" firstAttribute="centerY" secondItem="8jw-yY-Ora" secondAttribute="centerY" id="c5x-yc-C3G"/>
+                    <constraint firstItem="6tH-1U-K1n" firstAttribute="top" secondItem="8jw-yY-Ora" secondAttribute="top" id="if8-RP-kfm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="6db-UL-age" id="3vV-Gc-1Sp"/>
+                <outlet property="nameLabel" destination="rt7-Ih-MaJ" id="GfS-rq-c8F"/>
+                <outlet property="poiImageView" destination="FMg-iB-FVp" id="OT9-Mn-RpY"/>
+                <outlet property="typeLabel" destination="Ja6-lM-cLV" id="QHT-Mm-oXL"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
