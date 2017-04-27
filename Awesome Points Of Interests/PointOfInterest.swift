@@ -18,6 +18,17 @@ struct PointOfInterest {
         case restaurant
         case museum
         case hotel
+        
+        var stringValue: String {
+            switch self {
+            case .restaurant:
+                return "Restaurant"
+            case .museum:
+                return "Musée"
+            case .hotel:
+                return "Hotel"
+            }
+        }
     }
     
     let name: String
@@ -51,6 +62,21 @@ struct PointOfInterest {
     var numberOfReviews: Int
     var stars: Float
     var myReview: Float
+    
+    static var random: PointOfInterest {
+        
+        let random = arc4random_uniform(100)
+        
+        let name = "Poi \(random)"
+        let address = "\(random) rue des Randoms"
+        
+        let typeRandom = arc4random_uniform(2)
+        let type = PoiType(rawValue: Int(typeRandom))!
+
+        let poi = PointOfInterest(name: name, address: address, type: type, latitude: 0, longitude: 0, phoneNumber: "0123456789", websiteURL: nil, wikipediaPageURL: nil, numberOfReviews: 0, stars: 0, myReview: 0)
+        
+        return poi
+    }
 }
 
 extension PointOfInterest: Hashable {

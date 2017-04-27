@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330F561F1EB1E6D200FD65E4 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330F561E1EB1E6D200FD65E4 /* POITableViewCell.swift */; };
+		330F56221EB1E7E500FD65E4 /* POIListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330F56211EB1E7E500FD65E4 /* POIListViewController.swift */; };
 		33DDC9D91EAF7E4A000A07F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DDC9D81EAF7E4A000A07F0 /* AppDelegate.swift */; };
 		33DDC9DB1EAF7E4A000A07F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DDC9DA1EAF7E4A000A07F0 /* ViewController.swift */; };
 		33DDC9DE1EAF7E4A000A07F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DDC9DC1EAF7E4A000A07F0 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		330F561E1EB1E6D200FD65E4 /* POITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		330F56211EB1E7E500FD65E4 /* POIListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POIListViewController.swift; sourceTree = "<group>"; };
 		33DDC9D51EAF7E4A000A07F0 /* Awesome Points Of Interests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awesome Points Of Interests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33DDC9D81EAF7E4A000A07F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33DDC9DA1EAF7E4A000A07F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		330F56201EB1E6E100FD65E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				330F561E1EB1E6D200FD65E4 /* POITableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		33DDC9CC1EAF7E4A000A07F0 = {
 			isa = PBXGroup;
 			children = (
@@ -60,10 +72,12 @@
 		33DDC9D71EAF7E4A000A07F0 /* Awesome Points Of Interests */ = {
 			isa = PBXGroup;
 			children = (
+				330F56201EB1E6E100FD65E4 /* Views */,
 				33DDC9F11EAF90C9000A07F0 /* Models */,
 				33DDC9D81EAF7E4A000A07F0 /* AppDelegate.swift */,
 				33DDC9DA1EAF7E4A000A07F0 /* ViewController.swift */,
 				33DDC9DC1EAF7E4A000A07F0 /* Main.storyboard */,
+				330F56211EB1E7E500FD65E4 /* POIListViewController.swift */,
 				33DDC9E21EAF7E4A000A07F0 /* Assets.xcassets */,
 				33DDC9E41EAF7E4A000A07F0 /* LaunchScreen.storyboard */,
 				33DDC9E71EAF7E4A000A07F0 /* Info.plist */,
@@ -157,7 +171,9 @@
 				33DDC9E11EAF7E4A000A07F0 /* Awesome_Points_Of_Interests.xcdatamodeld in Sources */,
 				33DDC9EE1EAF8FB4000A07F0 /* PointOfInterest.swift in Sources */,
 				33DDC9DB1EAF7E4A000A07F0 /* ViewController.swift in Sources */,
+				330F56221EB1E7E500FD65E4 /* POIListViewController.swift in Sources */,
 				33DDC9D91EAF7E4A000A07F0 /* AppDelegate.swift in Sources */,
+				330F561F1EB1E6D200FD65E4 /* POITableViewCell.swift in Sources */,
 				33DDC9F01EAF8FBF000A07F0 /* Directory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
