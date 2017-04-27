@@ -8,7 +8,14 @@
 
 class Directory {
     
-    private var poiSet: Set<PointOfInterest> = []
+    static let instance = Directory()
+    
+    private var poiSet: Set<PointOfInterest>
+    
+    private init() {
+        poiSet = [PointOfInterest.random, PointOfInterest.random, PointOfInterest.random]
+        
+    }
     
     var allPois: [PointOfInterest] {
         return poiSet.sorted() { (p1, p2) -> Bool in

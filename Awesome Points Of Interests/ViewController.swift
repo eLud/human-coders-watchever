@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var typeSegmentedControl: UISegmentedControl!
     
-    let directory = Directory()
+    let directory = Directory.instance
     
     override func viewDidLoad() {
         super.viewDidLoad()
