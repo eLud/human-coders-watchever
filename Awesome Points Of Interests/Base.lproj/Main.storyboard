@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="1501.449275362319" y="36.684782608695656"/>
         </scene>
-        <!--View Controller-->
+        <!--Poi Details View Controller-->
         <scene sceneID="kyA-1B-b2G">
             <objects>
-                <viewController id="1sL-Om-tfJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PoiDetailsViewController" id="1sL-Om-tfJ" customClass="PoiDetailsViewController" customModule="Awesome_Points_Of_Interests" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k8o-4k-DSc"/>
                         <viewControllerLayoutGuide type="bottom" id="hv0-kD-avR"/>

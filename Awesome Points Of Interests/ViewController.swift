@@ -24,17 +24,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var latitudeTextField: UITextField!
     @IBOutlet weak var longitudeTextField: UITextField!
-
-
     @IBOutlet weak var addressStackView: UIStackView!
-
     @IBOutlet weak var typeSegmentedControl: UISegmentedControl!
     
     let directory = Directory.instance
-    
+    var desiredColor: UIColor?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if let color = desiredColor {
+            view.backgroundColor = color
+        }
     }
 
     override func didReceiveMemoryWarning() {
