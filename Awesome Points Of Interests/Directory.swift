@@ -6,6 +6,8 @@
 //  Copyright © 2017 Ludovic Ollagnier. All rights reserved.
 //
 
+import Foundation
+
 class Directory {
     
     static let instance = Directory()
@@ -14,7 +16,6 @@ class Directory {
     
     private init() {
         poiSet = [PointOfInterest.random, PointOfInterest.random, PointOfInterest.random]
-        
     }
     
     var allPois: [PointOfInterest] {
@@ -27,10 +28,24 @@ class Directory {
     }
     
     func add(_ poi: PointOfInterest) -> Bool {
-        return poiSet.insert(poi).inserted
+        
+        let inserted = poiSet.insert(poi).inserted
+        
+        if inserted {
+            let center = NotificationCenter.default
+            center.post(name: Notification.Name("DirectoryUpdated"), object: self)
+        }
+        return inserted
     }
     
     func remove(_ poi: PointOfInterest) -> PointOfInterest? {
-        return poiSet.remove(poi)
+        
+        let removed = poiSet.remove(poi)
+        
+        if let _ = removed {
+            let center = NotificationCenter.default
+            center.post(name: Notification.Name("DirectoryUpdated"), object: self)
+        }
+        return removed
     }
 }
