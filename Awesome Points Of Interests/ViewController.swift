@@ -62,6 +62,8 @@ class ViewController: UIViewController {
         
         directory.add(poi)
         print(directory.allPois)
+        
+        dismiss(animated: true, completion: nil)
     }
     
     private func addBlueBox() {

@@ -71,6 +71,7 @@
                 <outlet property="poiImageView" destination="FMg-iB-FVp" id="OT9-Mn-RpY"/>
                 <outlet property="typeLabel" destination="Ja6-lM-cLV" id="QHT-Mm-oXL"/>
             </connections>
+            <point key="canvasLocation" x="-230" y="-109"/>
         </tableViewCell>
     </objects>
 </document>

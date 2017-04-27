@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LRE-TL-z6A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PId-00-F5l">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List View Controller-->
+        <!--Points of interests-->
         <scene sceneID="9l7-Es-mlb">
             <objects>
                 <viewController id="LRE-TL-z6A" customClass="POIListViewController" customModule="Awesome_Points_Of_Interests" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qmv-01-TD0">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="LRE-TL-z6A" id="X3v-Ee-6hL"/>
@@ -35,16 +35,23 @@
                             <constraint firstItem="icB-1V-weh" firstAttribute="top" secondItem="qmv-01-TD0" secondAttribute="bottom" id="Dg4-aD-cDA"/>
                             <constraint firstItem="qmv-01-TD0" firstAttribute="leading" secondItem="xAg-vJ-9c4" secondAttribute="leading" id="ENu-q4-wFl"/>
                             <constraint firstAttribute="trailing" secondItem="qmv-01-TD0" secondAttribute="trailing" id="X8V-Dq-jvB"/>
-                            <constraint firstItem="qmv-01-TD0" firstAttribute="top" secondItem="ecv-Vf-GIf" secondAttribute="bottom" id="qbd-OD-4u0"/>
+                            <constraint firstItem="qmv-01-TD0" firstAttribute="top" secondItem="xAg-vJ-9c4" secondAttribute="top" id="uvu-6b-fLr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Points of interests" id="NDB-7i-E3B">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5mt-rj-LZ6">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="FW4-Uf-Xxm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="qmv-01-TD0" id="boQ-6t-she"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hs-Fm-vLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-313" y="37"/>
+            <point key="canvasLocation" x="594.20289855072474" y="36.684782608695656"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -222,7 +229,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="37"/>
+            <point key="canvasLocation" x="1455" y="37"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rQy-88-4bf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PId-00-F5l" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nO-D1-LV5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LRE-TL-z6A" kind="relationship" relationship="rootViewController" id="jbO-YV-DUK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fiC-Rj-aug" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313.04347826086956" y="36.684782608695656"/>
         </scene>
     </scenes>
 </document>
