@@ -54,3 +54,13 @@ extension POIListViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension POIListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "showDetails", sender: nil)
+    
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+}
