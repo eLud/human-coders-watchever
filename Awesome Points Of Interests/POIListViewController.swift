@@ -38,12 +38,15 @@ extension POIListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 3
+        return Directory.instance.allPois.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "poiCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "poiCell", for: indexPath) as? POITableViewCell else { fatalError("Wrong cell type !") }
+            
+        let currentPoi = Directory.instance.allPois[indexPath.row]
+        cell.configure(with: currentPoi)
         
         return cell
     }
