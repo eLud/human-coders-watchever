@@ -27,6 +27,11 @@ class POIListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    deinit {
+        // Inutile à partir d'iOS 9
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     func refreshList() {
         tableView.reloadData()
     }
