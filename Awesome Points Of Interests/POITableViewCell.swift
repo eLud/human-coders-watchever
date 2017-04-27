@@ -26,7 +26,7 @@ class POITableViewCell: UITableViewCell {
         nameLabel.text = poi.name
         addressLabel.text = poi.address
         
-        poiImageView.isHidden = true
+        poiImageView.image = #imageLiteral(resourceName: "flag")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
