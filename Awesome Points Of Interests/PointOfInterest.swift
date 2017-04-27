@@ -66,13 +66,12 @@ struct PointOfInterest {
     static var random: PointOfInterest {
         
         let random = arc4random_uniform(100)
+        let typeRandom = arc4random_uniform(2)
         
-        let name = "Poi \(random)"
+        let type = PoiType(rawValue: Int(typeRandom))!
+        let name = "\(type.stringValue) \(random)"
         let address = "\(random) rue des Randoms"
         
-        let typeRandom = arc4random_uniform(2)
-        let type = PoiType(rawValue: Int(typeRandom))!
-
         let poi = PointOfInterest(name: name, address: address, type: type, latitude: 0, longitude: 0, phoneNumber: "0123456789", websiteURL: nil, wikipediaPageURL: nil, numberOfReviews: 0, stars: 0, myReview: 0)
         
         return poi
