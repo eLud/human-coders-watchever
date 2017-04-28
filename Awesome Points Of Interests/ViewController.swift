@@ -37,6 +37,19 @@ class ViewController: UIViewController {
         if let color = desiredColor {
             view.backgroundColor = color
         }
+        
+        let prefs = UserDefaults.standard
+//        prefs.set(true, forKey: "userAgreed")
+        
+        let userAgreed = prefs.bool(forKey: "userAgreed")
+        print(userAgreed)
+        
+        prefs.synchronize()
+        
+        let fileManager = FileManager.default
+        var  url = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        url = url.appendingPathComponent("Photos/2017/65764GHFYHJH.jpg")
+        
     }
 
     override func didReceiveMemoryWarning() {
