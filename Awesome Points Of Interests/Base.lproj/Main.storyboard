@@ -65,8 +65,36 @@
                     <view key="view" contentMode="scaleToFill" id="vtq-jD-hIq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="koN-8C-h1Z">
+                                <rect key="frame" x="87" y="72" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.71373334390862941" green="0.63518757498962808" blue="0.2151389621459017" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="6jV-Of-2ey"/>
+                                    <constraint firstAttribute="width" constant="240" id="Bwo-mz-S8A"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IEL-nl-uU5">
+                                <rect key="frame" x="87" y="226" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.71373334389999998" green="0.635187575" blue="0.2151389621" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="733-1b-0oD"/>
+                                    <constraint firstAttribute="width" constant="240" id="zcp-b0-bGf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.49803921569999998" green="0.80392156859999997" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="koN-8C-h1Z" firstAttribute="centerX" secondItem="vtq-jD-hIq" secondAttribute="centerX" id="7O9-yn-8I8"/>
+                            <constraint firstItem="koN-8C-h1Z" firstAttribute="top" secondItem="k8o-4k-DSc" secondAttribute="bottom" constant="8" id="DW7-pE-QbY"/>
+                            <constraint firstItem="IEL-nl-uU5" firstAttribute="top" secondItem="koN-8C-h1Z" secondAttribute="bottom" constant="26" id="XKA-4w-5EY"/>
+                            <constraint firstItem="IEL-nl-uU5" firstAttribute="centerX" secondItem="vtq-jD-hIq" secondAttribute="centerX" id="pGk-YN-wqT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="koN-8C-h1Z" id="3VY-yO-Ay9"/>
+                        <outlet property="imageView2" destination="IEL-nl-uU5" id="BvJ-dP-k3X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIE-5X-Lo2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -299,6 +327,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="x72-Rd-orq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="bwx-0V-4lw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
