@@ -11,8 +11,33 @@ import UIKit
 extension UIView {
     
     func goRed() {
-        UIView.animate(withDuration: 1.0) {
-            self.backgroundColor = .red
+        
+        UIView.animateKeyframes(withDuration: 1.0, delay: 0, options: [.autoreverse], animations: {
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.3, animations: {
+                self.transform = CGAffineTransform(translationX: -10, y: 0)
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.3, relativeDuration: 0.3, animations: {
+                
+                let transform = CGAffineTransform()
+                transform.translatedBy(x: 10, y: 0)
+                transform.scaledBy(x: 2, y: 2)
+                
+                self.transform = transform
+
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.3, animations: {
+                self.transform = CGAffineTransform(translationX: -10, y: 0)
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.9, relativeDuration: 0.1, animations: {
+                self.transform = CGAffineTransform(translationX: 0, y: 0)
+            })
+            
+        }) { (completed) in
+            
         }
     }
 }
