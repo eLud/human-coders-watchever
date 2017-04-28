@@ -11,6 +11,7 @@
 		330F56221EB1E7E500FD65E4 /* POIListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330F56211EB1E7E500FD65E4 /* POIListViewController.swift */; };
 		330F56241EB2072400FD65E4 /* POITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330F56231EB2072400FD65E4 /* POITableViewCell.xib */; };
 		330F56281EB2277700FD65E4 /* PoiDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330F56271EB2277700FD65E4 /* PoiDetailsViewController.swift */; };
+		330F562A1EB3467E00FD65E4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330F56291EB3467E00FD65E4 /* CoreDataStack.swift */; };
 		33DDC9D91EAF7E4A000A07F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DDC9D81EAF7E4A000A07F0 /* AppDelegate.swift */; };
 		33DDC9DB1EAF7E4A000A07F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DDC9DA1EAF7E4A000A07F0 /* ViewController.swift */; };
 		33DDC9DE1EAF7E4A000A07F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DDC9DC1EAF7E4A000A07F0 /* Main.storyboard */; };
@@ -26,6 +27,8 @@
 		330F56211EB1E7E500FD65E4 /* POIListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POIListViewController.swift; sourceTree = "<group>"; };
 		330F56231EB2072400FD65E4 /* POITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = POITableViewCell.xib; sourceTree = "<group>"; };
 		330F56271EB2277700FD65E4 /* PoiDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoiDetailsViewController.swift; sourceTree = "<group>"; };
+		330F56291EB3467E00FD65E4 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		330F562B1EB36E3A00FD65E4 /* Awesome_Points_Of_Interests 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Awesome_Points_Of_Interests 2.xcdatamodel"; sourceTree = "<group>"; };
 		33DDC9D51EAF7E4A000A07F0 /* Awesome Points Of Interests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awesome Points Of Interests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33DDC9D81EAF7E4A000A07F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33DDC9DA1EAF7E4A000A07F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 			children = (
 				33DDC9ED1EAF8FB4000A07F0 /* PointOfInterest.swift */,
 				33DDC9EF1EAF8FBF000A07F0 /* Directory.swift */,
+				330F56291EB3467E00FD65E4 /* CoreDataStack.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -178,6 +182,7 @@
 				33DDC9E11EAF7E4A000A07F0 /* Awesome_Points_Of_Interests.xcdatamodeld in Sources */,
 				33DDC9EE1EAF8FB4000A07F0 /* PointOfInterest.swift in Sources */,
 				33DDC9DB1EAF7E4A000A07F0 /* ViewController.swift in Sources */,
+				330F562A1EB3467E00FD65E4 /* CoreDataStack.swift in Sources */,
 				330F56221EB1E7E500FD65E4 /* POIListViewController.swift in Sources */,
 				33DDC9D91EAF7E4A000A07F0 /* AppDelegate.swift in Sources */,
 				330F561F1EB1E6D200FD65E4 /* POITableViewCell.swift in Sources */,
@@ -358,9 +363,10 @@
 		33DDC9DF1EAF7E4A000A07F0 /* Awesome_Points_Of_Interests.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				330F562B1EB36E3A00FD65E4 /* Awesome_Points_Of_Interests 2.xcdatamodel */,
 				33DDC9E01EAF7E4A000A07F0 /* Awesome_Points_Of_Interests.xcdatamodel */,
 			);
-			currentVersion = 33DDC9E01EAF7E4A000A07F0 /* Awesome_Points_Of_Interests.xcdatamodel */;
+			currentVersion = 330F562B1EB36E3A00FD65E4 /* Awesome_Points_Of_Interests 2.xcdatamodel */;
 			path = Awesome_Points_Of_Interests.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -7,45 +7,57 @@
 //
 
 import Foundation
+import CoreData
 
 class Directory {
     
     static let instance = Directory()
     
-    private var poiSet: Set<PointOfInterest>
-    
     private init() {
-        poiSet = [PointOfInterest.random, PointOfInterest.random, PointOfInterest.random]
     }
     
     var allPois: [PointOfInterest] {
-        return poiSet.sorted() { (p1, p2) -> Bool in
-            if p1.name < p2.name {
-                return true
-            }
-            return false
-        }
+        
+        let context = CoreDataStack.defaultStack.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<POI> = POI.fetchRequest()
+        guard let results = try? context.fetch(fetchRequest) else { return [] }
+        
+        return []
     }
     
     func add(_ poi: PointOfInterest) -> Bool {
         
-        let inserted = poiSet.insert(poi).inserted
+        let context = CoreDataStack.defaultStack.persistentContainer.viewContext
         
-        if inserted {
-            let center = NotificationCenter.default
-            center.post(name: Notification.Name("DirectoryUpdated"), object: self)
-        }
-        return inserted
+        //Créer un objet CD
+        let coreDataPOI = POI(context: context)
+        coreDataPOI.address = poi.address
+        coreDataPOI.name = poi.name
+        
+//        let country = Country(context: context)
+//        country.name = "USA"
+//        
+//        coreDataPOI.country = country
+        CoreDataStack.defaultStack.saveContext()
+        
+        let fetchRequest: NSFetchRequest<POI> = POI.fetchRequest()
+        guard let results = try? context.fetch(fetchRequest) else { return false }
+        print(results)
+        
+        //Gestion d'erreur avec try!
+//        let results = try! context.fetch(fetchRequest)
+        
+        //Gestion d'erreur avec do-catch
+//        do {
+//            let results = try context.fetch(fetchRequest)
+//        } catch {
+//            print(error)
+//        }
+        
+        return true
     }
     
     func remove(_ poi: PointOfInterest) -> PointOfInterest? {
-        
-        let removed = poiSet.remove(poi)
-        
-        if let _ = removed {
-            let center = NotificationCenter.default
-            center.post(name: Notification.Name("DirectoryUpdated"), object: self)
-        }
-        return removed
+        return nil
     }
 }

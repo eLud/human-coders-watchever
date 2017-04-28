@@ -2,15 +2,15 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Country" representedClassName="Country" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="pois" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="POI" inverseName="country" inverseEntity="POI" syncable="YES"/>
+        <relationship name="pois" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="POI" inverseName="country" inverseEntity="POI" syncable="YES"/>
     </entity>
     <entity name="POI" representedClassName="POI" syncable="YES" codeGenerationType="class">
-        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="pois" inverseEntity="Country" syncable="YES"/>
     </entity>
     <elements>
-        <element name="POI" positionX="99" positionY="-34" width="128" height="88"/>
-        <element name="Country" positionX="-137" positionY="-28" width="128" height="73"/>
+        <element name="POI" positionX="-270" positionY="-45" width="128" height="88"/>
+        <element name="Country" positionX="117" positionY="0" width="128" height="75"/>
     </elements>
 </model>
